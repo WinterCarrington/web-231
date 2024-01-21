@@ -12,5 +12,12 @@
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var phone = document.getElementById("phone").value;
-            var 
+ // Use a conditional operator to test the truthy or falsy values of name, email, and phone
+            var isValidForm = name && email && phoneValue;
+ // Display appropriate alert message based on the result of the conditional expression
+            window.alert(isValidForm ? "Thank you!" : "Please fill in all fields");
+
+
       }
+// Attach an event listener to the page element with id "submit"
+            document.getElementById("submit").addEventListener("click", verifyForm);
