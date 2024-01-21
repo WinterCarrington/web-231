@@ -39,6 +39,15 @@
              document.getElementById("photRights").checked = false;
              document.getElementById("photoDist").value = 0;
             getEstimate();
+
+//Add event handlers for each input control 
+            document.getElementById("photNum").onchange = getEstimate;
+            document.getElementById("photHrs").onchange = getEstimate;
+            document.getElementById("photoDist").onchange = getEstimate;
+            document.getElementById("makeBook").onchange = getEstimate;
+            document.getElementById("photoRights").onchange = getEstimate;
+
+
              }
 // Call setupForm when the page loads
         window.onload = function() {
