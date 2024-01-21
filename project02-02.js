@@ -8,4 +8,9 @@
 
       Filename: project02-02.js
  */
- 
+      function verifyForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var 
+      }
