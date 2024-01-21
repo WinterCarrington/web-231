@@ -20,13 +20,29 @@
             let buyRights = document.getElementById("photoRights").checked; 
 
  //Add the cost for the photographers for the hours covered 
-            totalCost += photographers * hours * EMP_COST;
+                        totalCost += photographers * hours * EMP_COST;
 //Add the cost of distance per photographer per mile 
-            totalCost += photographers * distance * TRAVEL_COST;
+                         totalCost += photographers * distance * TRAVEL_COST;
 //Add the cost of the book if purchased 
-            totalCost += buyBook ? BOOK_COST : 0;
-//Add the cost of the phot rights if purchased 
-            totalCost += buyRights ? REPRO_COST : 0;
+                         totalCost += buyBook ? BOOK_COST : 0;
+ //Add the cost of the phot rights if purchased 
+                         totalCost += buyRights ? REPRO_COST : 0;
 //Display the total cost estimate 
-            document.getElementById("estimate").innerHTML = "$" + totalCost;
+                         document.getElementById("estimate").innerHTML = "$" + totalCost;
+
+//Set the forms default vaues 
+         function setupForm() {
+            document.getElementById("photNum").value = 1;
+            document.getElementById("photHrs").value = 2;
+
+             document.getElementById("makeBook").checked = false;
+             document.getElementById("photRights").checked = false;
+             document.getElementById("photoDist").value = 0;
+            getEstimate();
+             }
+// Call setupForm when the page loads
+        window.onload = function() {
+            setupForm();
+        };
+
         }
