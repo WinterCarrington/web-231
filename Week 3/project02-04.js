@@ -22,62 +22,59 @@
                 return "$" + value.toFixed(2);
             }
 
-// Function to calculate the total cost
-            function calcTotal() {
-// Declare the cost variable with an initial value of 0
-            var cost = 0;
-// Declare variables for checkbox states
-            var buyChicken = document.getElementById('chicken').checked;
-            var buyHalibut = document.getElementById('halibut').checked;
-            var buyBurger = document.getElementById('burger').checked;
-            var buySalmon = document.getElementById('salmon').checked;
-            var buySalad = document.getElementById('salad').checked;
-
-
-// Calculate cost based on selected items
-            cost += buyChicken ? CHICKEN_PRICE : 0;
-            cost += buyHalibut ? HALIBUT_PRICE : 0;
-            cost += buyBurger ? BURGER_PRICE : 0;
-            cost += buySalmon ? SALMON_PRICE : 0;
-            cost += buySalad ? SALAD_PRICE : 0;
-
-//Calculate Tax
-            var tax = cost * SALES_TAX;
-
-// Show the tax amount in the appropriate span element
-            var foodTaxSpan = document.getElementById('foodTax'); 
-            foodTaxSpan.innerHTML = formatCurrency(tax);
-
-// Calculate total cost including tax
-            var totalCost = cost + tax;
-
-// Show the total cost in the relevant span element
-            var totalBillSpan = document.getElementById('totalBill');
-            totalBillSpan.innerHTML = formatCurrency(totalCost);
-            }
-
 // Event handler for the "chicken" element
-            document.getElementById('chicken').addEventListener('click', function() {
+        document.getElementById('chicken').addEventListener('click', function() {
             calcTotal();
         });
 
 // Event handler for the "halibut" element
-            document.getElementById('halibut').addEventListener('click', function() {
-                calcTotal();
-            });
+        document.getElementById('halibut').addEventListener('click', function() {
+            calcTotal();
+        });
 
 // Event handler for the "burger" element
-            document.getElementById('burger').addEventListener('click', function() {
-                calcTotal();
-            });
+        document.getElementById('burger').addEventListener('click', function() {
+            calcTotal();
+        });
 
 // Event handler for the "salmon" element
-            document.getElementById('salmon').addEventListener('click', function() {
-                calcTotal();
-            });
+        document.getElementById('salmon').addEventListener('click', function() {
+            calcTotal();
+        });
 
 // Event handler for the "salad" element
-            document.getElementById('salad').addEventListener('click', function() {
-                calcTotal();
-            });
-                        
+        document.getElementById('salad').addEventListener('click', function() {
+            calcTotal();
+        });
+
+        function calcTotal() {
+// Declare the cost variable with an initial value of 0
+        var cost = 0;
+// Declare variables for checkbox states
+        var buyChicken = document.getElementById('chicken').checked;
+        var buyHalibut = document.getElementById('halibut').checked;
+        var buyBurger = document.getElementById('burger').checked;
+        var buySalmon = document.getElementById('salmon').checked;
+        var buySalad = document.getElementById('salad').checked;
+
+// Calculate cost based on selected items
+        cost += buyChicken ? CHICKEN_PRICE : 0;
+        cost += buyHalibut ? HALIBUT_PRICE : 0;
+        cost += buyBurger ? BURGER_PRICE : 0;
+        cost += buySalmon ? SALMON_PRICE : 0;
+        cost += buySalad ? SALAD_PRICE : 0;
+
+ // Calculate Tax
+        var tax = cost * SALES_TAX;
+
+// Show the tax amount in the appropriate span element
+        var foodTaxSpan = document.getElementById('foodTax');
+        foodTaxSpan.innerHTML = formatCurrency(tax);
+
+// Calculate total cost including tax
+         var totalCost = cost + tax;
+
+// Show the total cost in the relevant span element
+        var totalBillSpan = document.getElementById('totalBill');
+        totalBillSpan.innerHTML = formatCurrency(totalCost);
+    }
