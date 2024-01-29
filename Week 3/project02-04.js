@@ -56,31 +56,28 @@
             totalBillSpan.innerHTML = formatCurrency(totalCost);
             }
 
- // Event handler for the "chicken" element
-        document.getElementById('chicken').addEventListener('click', function() {
+// Event handler for the "chicken" element
+            document.getElementById('chicken').addEventListener('click', function() {
             calcTotal();
         });
 
 // Event handler for the "halibut" element
-        document.getElementById('halibut').addEventListener('click', function() {
-            calcTotal();
-        });
+            document.getElementById('halibut').addEventListener('click', function() {
+                calcTotal();
+            });
 
 // Event handler for the "burger" element
-        document.getElementById('burger').addEventListener('click', function() {
-            calcTotal();
-        });
+            document.getElementById('burger').addEventListener('click', function() {
+                calcTotal();
+            });
 
 // Event handler for the "salmon" element
-        document.getElementById('salmon').addEventListener('click', function() {
-            calcTotal();
-        });
+            document.getElementById('salmon').addEventListener('click', function() {
+                calcTotal();
+            });
 
 // Event handler for the "salad" element
-        document.getElementById('salad').addEventListener('click', function() {
-            calcTotal();
-        });
-
-
-
-            
+            document.getElementById('salad').addEventListener('click', function() {
+                calcTotal();
+            });
+                        
