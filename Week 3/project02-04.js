@@ -45,8 +45,8 @@
             var tax = cost * SALES_TAX;
 
 // Show the tax amount in the appropriate span element
-            var foodTotalSpan = document.getElementById('foodTotal');
-            foodTotalSpan.innerHTML = formatCurrency(cost);
+            var foodTaxSpan = document.getElementById('foodTax');
+            foodTaxSpan.innerHTML = formatCurrency(tax);
 
 // Calculate total cost including tax
             var totalCost = cost + tax;
