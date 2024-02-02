@@ -25,7 +25,13 @@
                     menuItems[i].addEventListener('click', calcTotal);
                 }
 
-        // Function to calculate total (you may need to define this function)
+        // Function to calculate total 
                 function calcTotal() {
+                    var orderTotal = 0;
+                        for (var i = 0; i < menuItems.length; i++) {
+                            if (menuItems[i].checked) { 
+                                orderTotal += Number(menuItems[i].value);
+                    }
+                }  
             
         }
