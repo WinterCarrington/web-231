@@ -28,10 +28,14 @@
         // Function to calculate total 
                 function calcTotal() {
                     var orderTotal = 0;
+                       // Create a for loop that loops through the contents of the menuItems collection
                         for (var i = 0; i < menuItems.length; i++) {
                             if (menuItems[i].checked) { 
                                 orderTotal += Number(menuItems[i].value);
                     }
                 }  
-            
+               
+             document.getElementById('billTotal').innerHTML = formatCurrency(orderTotal);
         }
+            
+        
