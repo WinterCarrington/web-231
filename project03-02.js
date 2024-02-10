@@ -33,3 +33,4 @@ captions[13]="The ISS over the Ionian Sea [2007]";
             <figcaption>${captions[i]}</figcaption>
         </figure>`;
     }
+        document.getElementById('gallery').innerHTML = htmlCode;
