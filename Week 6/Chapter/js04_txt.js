@@ -15,7 +15,7 @@
 acresComplete = true;
 let cropsComplete = true;
 let monthsComplete = true;
-et fuelComplete = true;
+let fuelComplete = true;
 
 /* global variables referencing sidebar h2 and p elements */
 let messageHeadElement = document.getElementById("messageHead");
