@@ -67,7 +67,7 @@ function createEventListeners() {
 
 
 /* verify acres text box entry is a positive number */
-function verifyAcres) {
+function verifyAcres() {
    testFormCompleteness();      
 }
 
