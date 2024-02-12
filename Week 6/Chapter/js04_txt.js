@@ -1,3 +1,4 @@
+"use strict";  // Add "use strict" statement here
 /*    JavaScript 7th Edition
       Chapter 4
       Chapter case
@@ -6,6 +7,8 @@
       Variables and functions
       Author: Lantha Wade  
       Date:   02/12/24
+      
+
 
       Filename: js04.js
  */
