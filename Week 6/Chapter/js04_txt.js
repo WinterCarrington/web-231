@@ -15,7 +15,7 @@
 
 
 /* global variables tracking status of each form section */
-let acresComplete = true;
+let acresComplete = true; /* corrected variable to properly declare by adding "let" */
 let cropsComplete = true;
 let monthsComplete = true;
 let fuelComplete = true;
