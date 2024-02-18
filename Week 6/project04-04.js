@@ -1,3 +1,4 @@
+"use strict";  // Add "use strict" statement here
 /*    JavaScript 7th Edition
       Chapter 4
       Project 04-04
