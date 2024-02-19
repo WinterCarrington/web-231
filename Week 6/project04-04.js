@@ -16,8 +16,8 @@ let billBox = document.getElementById(bill);
 let changeBox = document.getElementById(change);
 
 // Event handlers to be run when the cash or bill value changes
-cashBox.addEventListener("change", runRegister);
-billBox.addEventListener("change", runRegister);
+cashBox.addEventListener("change", runTheRegister);//corrected spelling error to 'runTheRegister' from 'runRegister'
+billBox.addEventListener("change", runTheRegister);
 
 // Function to reset the values in the web page
 function zeroTheRegister() {
