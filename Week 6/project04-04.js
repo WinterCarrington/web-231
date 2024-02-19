@@ -83,7 +83,7 @@ function calcChange(changeValue) {
    
    // Determine the number of pennies
    // The Math.round() method rounds the value to the nearest integer
-   let coin1Amt = Math.round(changeValue*100);
+   let coin1Amt = Math.round(changeValue); //corrected calculation for the number of pennies from *100 
    document.getElementById("coin1").innerHTML = coin1Amt;
 }
 
