@@ -11,9 +11,9 @@
 */
 
 // Global variables
-let cashBox = document.getElementById(cash);
-let billBox = document.getElementById(bill);
-let changeBox = document.getElementById(change);
+let cashBox = document.getElementById("cash"); //corrected the parameter to "cash" 
+let billBox = document.getElementById("bill");
+let changeBox = document.getElementById("change");
 
 // Event handlers to be run when the cash or bill value changes
 cashBox.addEventListener("change", runTheRegister);//corrected spelling error to 'runTheRegister' from 'runRegister'
