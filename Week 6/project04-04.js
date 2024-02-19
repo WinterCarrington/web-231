@@ -35,14 +35,21 @@ function zeroTheRegister() {
 
 // Function to run the cash register
 function runTheRegister() {
-   zeroTheRegister();
-   
-   let changeValue = cashBox.value - billBox.value;  // calculate the change 
-   
-   changeBox.value = formatCurrency(changeValue); // format the change as currency
-   
+    zeroTheRegister();
+    try {
+       let changeValue = cashBox.value - billBox.value;  // calculate the change 
+       if (changeValue < 0) {
+          throw new Error("Cash amount doesn't cover the bill");
+       }
+    
+       changeBox.value = formatCurrency(changeValue); // format the change as currency
+       calcChange(changeValue); // Determine the units of currency needed for the change
+    } catch (error) {
+       document.getElementById("warning").innerHTML = error.message;
+    }
+ }
    calcChange(changeValue); // Determine the units of currency needed for the change
-}
+
 
 // Function to calculate the change by each unit of currency
 function calcChange(changeValue) {
