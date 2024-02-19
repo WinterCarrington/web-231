@@ -11,7 +11,7 @@
 */
 
 // Global variables
-let cashBox = document.getElementById("cash"); //corrected the parameter to "cash" 
+let cashBox = document.getElementById("cash"); //enclosed the string cash in "cash" due to it being an ID
 let billBox = document.getElementById("bill");
 let changeBox = document.getElementById("change");
 
