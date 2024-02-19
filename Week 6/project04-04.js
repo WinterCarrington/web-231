@@ -48,8 +48,7 @@ function runTheRegister() {
        document.getElementById("warning").innerHTML = error.message;
     }
  }
-
-
+ 
 // Function to calculate the change by each unit of currency
 function calcChange(changeValue) {
    // Determine the number of $20 bills
