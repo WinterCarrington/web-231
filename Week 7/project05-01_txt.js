@@ -37,6 +37,18 @@ startQuiz.onclick = function() {
 };
 
 
+/*------------- Countdown function ----------------*/
+function countdown() {
+    // If timeLeft is equal to 0
+    if (timeLeft === 0) {
+  // Cancel the timed command with the variable timeID
+    clearInterval(timeID);
+  
+ // Declare a variable named totalCorrect and set it equal to the value returned by the checkAnswers() function
+ let totalCorrect = checkAnswers();
+
+
+
 
 
 
