@@ -41,29 +41,35 @@ startQuiz.onclick = function() {
 function countdown() {
     // If timeLeft is equal to 0
     if (timeLeft === 0) {
-  // Cancel the timed command with the variable timeID
+    // Cancel the timed command with the variable timeID
     clearInterval(timeID);
   
- // Declare a variable named totalCorrect and set it equal to the value returned by the checkAnswers() function
- let totalCorrect = checkAnswers();
+    // Declare a variable named totalCorrect and set it equal to the value returned by the checkAnswers() function
+        let totalCorrect = checkAnswers();
+    // If totalCorrect is equal to the length of the correctAnswers array
+        if (totalCorrect === correctAnswers.length) {
+    // Display an alert window congratulating the student on getting 100%
+         alert("Congratulations! You got 100%!");
+     } else {
+    // Display an alert window indicating the number of incorrect answers out of the total number of questions on the quiz
+        alert("You got " + (correctAnswers.length - totalCorrect) + " incorrect out of " + correctAnswers.length + " questions.");
+    // Change the value of the timeLeft variable to quizTime
+         timeLeft = quizTime;
 
+    // Set quizClock.value to the value of the timeLeft variable
+        quizClock.value = timeLeft;
 
+    // Change the class attribute of the overlay object to "hidequiz"
+        overlay.className = "hidequiz";
+        }
+    } else {
+    // If the timeLeft variable is not equal to 0, then decrease the value of timeLeft by 1
+        timeLeft--;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Set quizClock.value to the value of the timeLeft variable
+        quizClock.value = timeLeft;
+        }
+    }
 
 
 
