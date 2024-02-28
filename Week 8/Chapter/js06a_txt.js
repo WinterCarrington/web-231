@@ -20,11 +20,16 @@ window.addEventListener("load", function() {
         calcOrder ();
         function calcOrder() {
     //Determine the selected model 
-        letmIndex= model.selectedIndex;
+        let mIndex= model.selectedIndex;
         let mValue= model.options[mIndex].value;
         
     //Determine the selected quantity 
         let qIndex= orderForm.elements.quantity.selectedIndex;
+        let quantity= orderForm.elements.qty[qIndex].value;
+
+    //Model cost= Model cost times quantity 
+        let modelCost= mValue*quantity;
+        orderForm.elements.modelCost.value= modelCost;
 
         }
 
