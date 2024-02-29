@@ -38,6 +38,19 @@ window.addEventListener("load", function() {
         let planCost= planValue * quantity; 
         orderForm.elements.planCost.value= planCost;
 
+    //Calculate the order subtotal
+        let subtotal= modelCost + planCost;
+        orderForm.elements.subtotal.value= subtotal;
+
+    //Calculate the 5% salkes tax
+        let salesTax= subtotal * 0.05;
+        orderForm.elements.salesTax.value= salesTax;
+
+    //Calculate the total cost of thbe order
+        let totalCost= subtotal + salesTax;
+        orderForm.elements.totalCost.value= totalCost;
+
+
         }
 
 });
