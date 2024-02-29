@@ -31,6 +31,13 @@ window.addEventListener("load", function() {
         let modelCost= mValue*quantity;
         orderForm.elements.modelCost.value= modelCost;
 
+    //Retrieve the cost of the protection plan
+        let planValue= document.querySelector('input [name="plan"]checked').value;
+
+    //Charge the plan to each item ordered
+        let planCost= planValue * quantity; 
+        orderForm.elements.planCost.value= planCost;
+
         }
 
 });
