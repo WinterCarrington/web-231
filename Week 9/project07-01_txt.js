@@ -36,4 +36,4 @@ signupForm.addEventListener("submit", function(e) {
     signupForm.submit();
 
 }
-);
+});
